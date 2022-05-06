@@ -1,20 +1,28 @@
-package lecture.c04core;
+package lecture.c05core;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import lombok.extern.log4j.Log4j;
+
+@Log4j
 public class App {
 	public static void main(String[] args) {
-		String path = "lecture/c04core/context.xml";
+		String path = "lecture/c05core/context.xml";
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext(path);
-		Servlet s = context.getBean(Servlet.class);
-		Dao d = context.getBean(Dao.class);
+
+		MyServlet s = context.getBean(MyServlet.class);
+		MyDao d = context.getBean(MyDao.class);
 		
-		System.out.println(s);
-		System.out.println(d);
-		
-		
-		
+		log.warn(s);
+		log.warn(d);
 	}
 }
+
+
+
+
+
+
+
