@@ -52,12 +52,15 @@ public class Ex05Controller {
 		System.out.println(com); // Computer(cpu = intel, hdd = 1024, model = apple)
 	}
 	
-	
+	// /ex05/sub05?name=donald&salary=1000&email=emp@gmail.com
 	@RequestMapping("sub05")
 	public void method05(Employee emp) {
 		System.out.println(emp); // Employee(name=donald, salary=1000, email=emp@gmail.com)
 	}
 }
+
+
+
 
 
 
