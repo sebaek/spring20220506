@@ -40,7 +40,18 @@ public class Ex04Controller {
 		System.out.println(age);
 	}
 	
-	
+	// url : http://localhost:8080/controller/ex04/sub05?name=sunja&age=88
+	@RequestMapping("sub05")
+	public void method05(HttpServletRequest request) {
+		// 1. request parameter 수집/가공
+		String name = request.getParameter("name");
+		String ageStr = request.getParameter("age");
+		
+		int age = Integer.parseInt(ageStr);
+		
+		System.out.println(name);
+		System.out.println(age);
+	}
 	
 	
 }
