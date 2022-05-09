@@ -1,5 +1,8 @@
 package org.zerock.controller.ex02;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
@@ -87,7 +90,35 @@ public class Ex04Controller {
 	public void method10(@RequestParam(value = "name", required = false) String name) {
 		System.out.println(name);
 	}
+	
+	// /ex04/sub11?food=apple&food=banana&food=milk
+	@RequestMapping("sub11")
+	public void method11(HttpServletRequest request) {
+		String[] foods = request.getParameterValues("food");
+		System.out.println(Arrays.toString(foods));
+	}
+	
+	// /ex04/sub12?food=apple&food=banana&food=milk
+	@RequestMapping("sub12")
+	public void method12(@RequestParam("food") String[] foods) {
+		System.out.println(Arrays.toString(foods));
+	}
+	
+	// /ex04/sub13?food=apple&food=banana&food=milk
+	@RequestMapping("sub13")
+	public void method13(String[] food) {
+		System.out.println(Arrays.toString(food));
+	}
+	
+	// /ex04/sub14?food=apple&food=banana&food=milk
+	@RequestMapping("sub14")
+	public void method14(@RequestParam("food") ArrayList<String> food) {
+		System.out.println(food);
+	}
 }
+
+
+
 
 
 
