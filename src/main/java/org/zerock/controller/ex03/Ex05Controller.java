@@ -46,6 +46,17 @@ public class Ex05Controller {
 	}
 	
 	
+	// /ex05/sub04?cpu=intel&hdd=1024&model=apple
+	@RequestMapping("sub04")
+	public void method04(Computer com) {
+		System.out.println(com); // Computer(cpu = intel, hdd = 1024, model = apple)
+	}
+	
+	
+	@RequestMapping("sub05")
+	public void method05(Employee emp) {
+		System.out.println(emp); // Employee(name=donald, salary=1000, email=emp@gmail.com)
+	}
 }
 
 
