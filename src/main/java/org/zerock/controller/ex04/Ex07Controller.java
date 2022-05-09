@@ -40,6 +40,13 @@ public class Ex07Controller {
 		
 		return "redirect:/ex06/sub01";
 	}
+	
+	@RequestMapping("sub04")
+	public String method03() {
+		
+		// /ex06/sub05로 리디렉션하는 코드 작성
+		return "redirect:/ex06/sub05";
+	}
 }
 
 
