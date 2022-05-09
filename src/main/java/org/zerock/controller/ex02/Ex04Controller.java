@@ -32,6 +32,12 @@ public class Ex04Controller {
 	public void method03(@RequestParam("name") String n, @RequestParam("age") String age) {
 		System.out.println(n);
 		System.out.println(age);
+		int a = Integer.parseInt(age);
+	}
+	
+	@RequestMapping("sub04")
+	public void method04(@RequestParam("age") int age) {
+		System.out.println(age);
 	}
 	
 	
