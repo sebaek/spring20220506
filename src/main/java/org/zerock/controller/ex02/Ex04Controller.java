@@ -82,6 +82,11 @@ public class Ex04Controller {
 		System.out.println(num); // 10000
 	}
 
+	// /ex04/sub10?name=trump
+	@RequestMapping("sub10")
+	public void method10(@RequestParam(value = "name", required = false) String name) {
+		System.out.println(name);
+	}
 }
 
 
