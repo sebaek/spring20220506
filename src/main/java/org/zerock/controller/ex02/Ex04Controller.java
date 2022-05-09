@@ -66,8 +66,38 @@ public class Ex04Controller {
 		System.out.println(name);
 		System.out.println(age);
 	}
+	
+	
+	// /ex04/sub08?address=seoul&number=300
+	@RequestMapping("sub08")
+	public void method08(String address, int number) {
+		System.out.println(address); // seoul
+		System.out.println(number); // 300
+	}
+	
+	// /ex04/sub09?password=1q2w3e&number=10000
+	@RequestMapping("sub09")
+	public void method09(@RequestParam("password") String pw, @RequestParam("number") int num) {
+		System.out.println(pw); // 1q2w3e
+		System.out.println(num); // 10000
+	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
