@@ -16,4 +16,27 @@ public class Ex02Controller {
 	public void method02() {
 		System.out.println("/ex02/sub02 일함");
 	}
+	
+	@RequestMapping(value= "sub03")
+	public void method03() {
+		System.out.println("/ex02/sub03 일함..");
+	}
+	
+	@RequestMapping({"sub04", "sub05"})
+	public void method04() {
+		System.out.println("/ex02/sub04, /ex02/sub05 일함");
+	}
+	
+	@RequestMapping(value = {"sub06", "sub07"})
+	public void method05() {
+		System.out.println("/ex02/sub06, /ex02/sub07 일함");
+	}
 }
+
+
+
+
+
+
+
+
