@@ -92,11 +92,16 @@ public class Ex08Controller {
 	
 	
 	@RequestMapping("sub08")
-	public void method08() {
+	public void method08(Model model) {
 		Employee emp = new Employee();
 //		email, name, salary 세팅
+		emp.setEmail("email@gmail.com");
+		emp.setName("trump");
+		emp.setSalary(30000);
 		
-		// jsp와 이메소드를 완성해서 위에 세팅한 email, name, salary 출력되도록 하세요.
+		model.addAttribute("employee", emp);
+		
+		// jsp와 이 메소드를 완성해서 위에 세팅한 email, name, salary 출력되도록 하세요.
 		
 	}
 }
