@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.zerock.controller.ex03.Customer;
+import org.zerock.controller.ex03.Employee;
 
 @Controller
 @RequestMapping("ex08")
@@ -75,7 +77,37 @@ public class Ex08Controller {
 		model.addAttribute("desc", map);
 		
 	}
+	
+	@RequestMapping("sub07")
+	public void method07(Model model) {
+		
+		Customer cus = new Customer();
+		cus.setAddress("seoul");
+		cus.setAge(30);
+		cus.setName("donald");
+		
+		model.addAttribute("customer", cus);
+		
+	}
+	
+	
+	@RequestMapping("sub08")
+	public void method08() {
+		Employee emp = new Employee();
+//		email, name, salary 세팅
+		
+		// jsp와 이메소드를 완성해서 위에 세팅한 email, name, salary 출력되도록 하세요.
+		
+	}
 }
+
+
+
+
+
+
+
+
 
 
 
