@@ -31,9 +31,21 @@ public class Ex08Controller {
 	@RequestMapping("sub03")
 	public String method03(Model model) {
 		
-		
+		model.addAttribute("myName", "sunja");
+		model.addAttribute("myAge", 99);
 		
 		return "ex08/sub03";
+	}
+	
+	// prefix:/WEB-INF/views/
+	// suffix:.jsp	
+	// 요청경로: /ex08/sub04
+	// view name: /WEB-INF/views/ex08/sub04.jsp
+	@RequestMapping("sub04")
+	public void method04(Model model) {
+		
+		model.addAttribute("foods", new String[] {"apple", "milk", "coffee"});
+		
 	}
 }
 
