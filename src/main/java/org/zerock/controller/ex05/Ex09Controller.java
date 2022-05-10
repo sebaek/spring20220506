@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.zerock.controller.ex03.Customer;
 
 @Controller
 @RequestMapping("ex09")
@@ -31,6 +31,12 @@ public class Ex09Controller {
 	@RequestMapping("sub03")
 	public void method03(@ModelAttribute("address") String address, 
 			             @ModelAttribute("email") String email) {
+		
+	}
+	
+	// /ex09/sub04?name=trump&age=40&address=newyork
+	@RequestMapping("sub04")
+	public void method04(@ModelAttribute("customer") Customer cus) {
 		
 	}
 }
