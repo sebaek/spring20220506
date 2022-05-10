@@ -47,6 +47,11 @@ public class Ex08Controller {
 		model.addAttribute("foods", new String[] {"apple", "milk", "coffee"});
 		
 	}
+	
+	@RequestMapping("sub05")
+	public void method05() {
+		
+	}
 }
 
 
