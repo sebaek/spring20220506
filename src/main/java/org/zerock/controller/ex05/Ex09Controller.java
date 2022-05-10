@@ -21,9 +21,15 @@ public class Ex09Controller {
 	}
 	
 	@RequestMapping("sub02")
-	public String method02(@RequestParam("name") @ModelAttribute("name") String name) {
-		
+	public String method02(@ModelAttribute("name") String name) {
+
 		return "ex09/sub01";
+	}
+	
+	@RequestMapping("sub03")
+	public void method03(@ModelAttribute("address") String address, 
+			             @ModelAttribute("email") String email) {
+		
 	}
 }
 
