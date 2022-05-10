@@ -2,6 +2,7 @@ package org.zerock.controller.ex07;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -43,6 +44,18 @@ public class Ex11Controller {
 	@GetMapping("main")
 	public void main() {
 		
+	}
+	
+	@RequestMapping("sub1")
+	public String method1(RedirectAttributes rttr) {
+		rttr.addFlashAttribute("address", "seoul");
+		
+		return "redirect:/ex11/sub2";
+	}
+	
+	@RequestMapping("sub2")
+	public void method2(@ModelAttribute("address") String address) {
+		System.out.println(address);
 	}
 }
 
