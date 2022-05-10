@@ -27,6 +27,14 @@ public class Ex08Controller {
 		
 		return "ex08/sub01";
 	}
+	
+	@RequestMapping("sub03")
+	public String method03(Model model) {
+		
+		
+		
+		return "ex08/sub03";
+	}
 }
 
 
