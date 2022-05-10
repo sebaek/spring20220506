@@ -39,6 +39,18 @@ public class Ex09Controller {
 	public void method04(@ModelAttribute("customer") Customer cus) {
 		
 	}
+	
+	// /ex09/sub05?name=trump&age=40&address=newyork	
+	@RequestMapping("sub05")
+	public String method05(@ModelAttribute Customer cus) {
+		return "ex09/sub04";
+	}
+
+	// /ex09/sub06?name=trump&age=40&address=newyork
+	@RequestMapping("sub06")
+	public String method06(Customer cus) {
+		return "ex09/sub04";
+	}
 }
 
 
