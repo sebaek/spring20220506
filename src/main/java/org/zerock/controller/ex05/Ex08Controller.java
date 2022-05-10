@@ -123,6 +123,12 @@ public class Ex08Controller {
 		
 		// model.addAttribute(Object)를 사용해서
 		// sub07.jsp에서 고객의 정보가 출력되도록 코드를 완성
+		Customer c = new Customer();
+		c.setAge(100);
+		c.setAddress("jeju");
+		c.setName("superman");
+		
+		model.addAttribute(c);
 		
 		return "ex08/sub07";
 	}
