@@ -132,6 +132,26 @@ public class Ex08Controller {
 		
 		return "ex08/sub07";
 	}
+	
+	@RequestMapping("sub11")
+	public void method11(Model model) {
+		List<String> l = new ArrayList<>();
+		
+		l.add("wanda");
+		l.add("doctor");
+		l.add("wong");
+		
+		model.addAttribute("list", l);
+		
+	}
+	
+	@RequestMapping("sub12")
+	public void method12() {
+		// 1. request 파라미터 수집/가공
+		// 2. bussiness 로직처리
+		// 3. add attribute
+		// 4. forward / redirect
+	}
 }
 
 
