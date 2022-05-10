@@ -1,5 +1,8 @@
 package org.zerock.controller.ex05;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
@@ -49,8 +52,14 @@ public class Ex08Controller {
 	}
 	
 	@RequestMapping("sub05")
-	public void method05() {
+	public void method05(Model model) {
 		
+		List<String> list = new ArrayList<>();
+		list.add("superman");
+		list.add("batman");
+		list.add("aquaman");
+		
+		model.addAttribute("heroList", list);
 	}
 }
 
