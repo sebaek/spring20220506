@@ -104,7 +104,35 @@ public class Ex08Controller {
 		// jsp와 이 메소드를 완성해서 위에 세팅한 email, name, salary 출력되도록 하세요.
 		
 	}
+	
+	@RequestMapping("sub09")
+	public String method09(Model model) {
+		Employee emp = new Employee();
+		emp.setEmail("korea@daum.net");
+		emp.setName("sunja");
+		emp.setSalary(70000);
+		
+//		model.addAttribute("emplyee", emp);
+		model.addAttribute(emp);// attribute이름이 클래스의 이름으로 결정(단, lowerCamelCase형식)
+		
+		return "ex08/sub08";
+	}
+	
+	@RequestMapping("sub10")
+	public String method10(Model model) {
+		
+		// model.addAttribute(Object)를 사용해서
+		// sub07.jsp에서 고객의 정보가 출력되도록 코드를 완성
+		
+		return "ex08/sub07";
+	}
 }
+
+
+
+
+
+
 
 
 
