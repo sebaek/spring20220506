@@ -20,12 +20,14 @@ public class Ex09Controller {
 		// 4. view forward: ex09/sub01.jsp
 	}
 	
+	// /ex09/sub02?name=sunja
 	@RequestMapping("sub02")
 	public String method02(@ModelAttribute("name") String name) {
 
 		return "ex09/sub01";
 	}
 	
+	// /ex09/sub03?address=seoul&email=seoul@gmail.com
 	@RequestMapping("sub03")
 	public void method03(@ModelAttribute("address") String address, 
 			             @ModelAttribute("email") String email) {
