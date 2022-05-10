@@ -1,7 +1,9 @@
 package org.zerock.controller.ex05;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -61,7 +63,26 @@ public class Ex08Controller {
 		
 		model.addAttribute("heroList", list);
 	}
+	
+	@RequestMapping("sub06")
+	public void method06(Model model) {
+		
+		Map<String, String> map = new HashMap<>();
+		map.put("name", "jin");
+		map.put("song", "butter");
+		map.put("group", "bts");
+		
+		model.addAttribute("desc", map);
+		
+	}
 }
+
+
+
+
+
+
+
 
 
 
