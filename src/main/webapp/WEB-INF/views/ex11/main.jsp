@@ -12,18 +12,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>로그인</h1>
-	
-	<h1>${message }</h1>
-	
-	<form action="login" method="post">
-		아이디 : <input type="text" name="id" /> <br />
-		암호 : <input type="password" name="password" /> <br />
-		<button>로그인</button>
-	</form>
+	<h1>메인 페이지</h1>
+	<h1>${message  }</h1>
 </body>
 </html>
-
 
 
 
