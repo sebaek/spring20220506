@@ -31,6 +31,11 @@ public class Ex04Service {
 		// TODO Auto-generated method stub
 		return mapper.selectEmployeeById(id);
 	}
+
+	public boolean addCustomer(CustomerDto customer) {
+		int count = mapper.insertCustomer(customer);
+		return count == 1;
+	}
 	
 	
 }
