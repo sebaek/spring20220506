@@ -17,6 +17,13 @@
 	<br />
 	주소는 ${customer.address }입니다.
 	</h1>
+	
+	<h1>
+	도시 : ${customer.city }
+	</h1>
+	<h1>
+	나라 : ${customer.country }
+	</h1>
 </body>
 </html>
 

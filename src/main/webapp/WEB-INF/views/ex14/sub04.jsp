@@ -15,6 +15,7 @@
 	<h1>직원 ${param.id } 번</h1>
 	<h1>FirstName : ${employee.firstName }</h1>
 	<h1>LastName : ${employee.lastName }</h1>
+	<h1>생일 : ${employee.birthDate }</h1>
 
 </body>
 </html>

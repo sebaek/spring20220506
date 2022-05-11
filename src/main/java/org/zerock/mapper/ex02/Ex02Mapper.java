@@ -15,7 +15,7 @@ public interface Ex02Mapper {
 	@Select("SELECT CustomerName Name, Address FROM Customers WHERE CustomerId = #{id} ")
 	CustomerDto selectCustomerById(int id);
 
-	@Select("SELECT FirstName, LastName FROM Employees WHERE EmployeeID = #{id} ")
+	@Select("SELECT FirstName, LastName, BirthDate FROM Employees WHERE EmployeeID = #{id} ")
 	EmployeeDto selectEmployeeById(int id);
 
 	
