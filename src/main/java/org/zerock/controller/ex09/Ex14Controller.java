@@ -24,6 +24,28 @@ public class Ex14Controller {
 		// 4. forward/redirect
 		
 	}
+	
+	// /ex14/sub02?id=3
+	// view에서 Employee의 firstName이 출력 되도록
+	
+	// controller.method02 완성
+	// service에도 메소드 추가
+	// mapper에도 메소드 추가
+	// jsp 작성
+	@RequestMapping("sub02")
+	public void method02(int id, Model model) {
+		String firstName = service.getEmployeeFirstNameById(id);
+		
+		model.addAttribute("employeeName", firstName);
+		
+		
+	}
 }
+
+
+
+
+
+
 
 

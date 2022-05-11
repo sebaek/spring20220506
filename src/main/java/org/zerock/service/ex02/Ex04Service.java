@@ -15,6 +15,14 @@ public class Ex04Service {
 		
 		return name;
 	}
+
+	public String getEmployeeFirstNameById(int id) {
+		return mapper.selectFirstEmployeeNameById(id);
+	}
 	
 	
 }
+
+
+
+
