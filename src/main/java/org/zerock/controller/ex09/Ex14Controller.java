@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.zerock.domain.ex01.CustomerDto;
+import org.zerock.domain.ex01.EmployeeDto;
 import org.zerock.service.ex02.Ex04Service;
 
 @Controller
@@ -59,7 +60,12 @@ public class Ex14Controller {
 	// mapper에 새 메소드 작성
 	// 새 jsp 파일 작성
 	// EmployeeDto 새로 작성
-	
+	@RequestMapping("sub04")
+	public void method04(int id, Model model) {
+		EmployeeDto dto = service.getEmployeeInfoById(id);
+		
+		model.addAttribute("employee", dto);
+	}
 }
 
 
