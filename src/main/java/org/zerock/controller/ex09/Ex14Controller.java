@@ -51,6 +51,15 @@ public class Ex14Controller {
 		
 	}
 	
+	// /ex14/sub04?id=7
+	// 직원의 FirstName, LastName이 모두 jsp 출력되도록
+	
+	// contoller에 새 메소드 작성
+	// service에 새 메소드 작성
+	// mapper에 새 메소드 작성
+	// 새 jsp 파일 작성
+	// EmployeeDto 새로 작성
+	
 }
 
 
