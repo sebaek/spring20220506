@@ -1,5 +1,7 @@
 package org.zerock.mapper.ex02;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.zerock.domain.ex01.CustomerDto;
@@ -37,6 +39,9 @@ public interface Ex02Mapper {
 	int insertEmployee(EmployeeDto dto);
 
 	
+	@Select("SELECT EmployeeID id, FirstName, LastName, Photo, Notes, BirthDate "
+			+ "FROM Employees ORDER BY EmployeeID ")
+	List<EmployeeDto> listEmployee();
 }
 
 
