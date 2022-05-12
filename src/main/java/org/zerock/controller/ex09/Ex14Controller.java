@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.zerock.domain.ex01.CustomerDto;
 import org.zerock.domain.ex01.EmployeeDto;
@@ -130,6 +131,18 @@ public class Ex14Controller {
 		
 		model.addAttribute("customers", list);
 		
+	}
+	
+	// /ex14/sub09?page=3
+	@GetMapping("sub09")
+	public String method09(@RequestParam(name = "page", defaultValue = "1")int page, Model model) {
+		int rowPerPage = 5;
+		
+		List<CustomerDto> list = service.listCustomerPage(page, rowPerPage);
+		
+		model.addAttribute("customers", list);
+		
+		return "/ex14/sub08";
 	}
 }
 

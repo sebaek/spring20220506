@@ -3,6 +3,7 @@ package org.zerock.mapper.ex02;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.zerock.domain.ex01.CustomerDto;
 import org.zerock.domain.ex01.EmployeeDto;
@@ -46,7 +47,23 @@ public interface Ex02Mapper {
 	@Select("SELECT CustomerID id, CustomerName, ContactName, Address,"
 			+ "City, PostalCode, Country FROM Customers ORDER BY CustomerId")
 	List<CustomerDto> listCustomer();
+
+	@Select("SELECT CustomerID id, "
+			+ "CustomerName, "
+			+ "ContactName, "
+			+ "Address, "
+			+ "City, "
+			+ "PostalCode, "
+			+ "Country "
+			+ "FROM Customers "
+			+ "LIMIT #{from }, #{row }")
+	List<CustomerDto> listCustomerPage(@Param("from") int from, @Param("row") int row);
 }
+
+
+
+
+
 
 
 

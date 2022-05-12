@@ -52,6 +52,13 @@ public class Ex04Service {
 	public List<CustomerDto> listCustomer() {
 		return mapper.listCustomer();
 	}
+
+	public List<CustomerDto> listCustomerPage(int page, int rowPerPage) {
+		
+		int from = (page-1) * rowPerPage;
+		
+		return mapper.listCustomerPage(from, rowPerPage);
+	}
 	
 }
 
