@@ -3,7 +3,7 @@
 <%@ attribute name="path" %>
 
 <nav aria-label="Page navigation example">
-	<ul class="pagination">
+	<ul class="pagination justify-content-center">
 		<c:forEach begin="${pageInfo.left }" end="${pageInfo.right }"
 			var="pageNum">
 			
