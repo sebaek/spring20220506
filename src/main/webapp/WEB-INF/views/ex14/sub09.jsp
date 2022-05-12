@@ -51,11 +51,20 @@
 		<a href="sub09?page=5">5</a>
 		 --%>
 
-		<c:forEach begin="${pageInfo.left }" end="${pageInfo.right }" var="page">
-		
-			<a href="sub09?page=${page }">${page }</a> |
-		
-		</c:forEach>		
+		<nav aria-label="Page navigation example">
+		  <ul class="pagination">
+		  
+		  	<c:forEach begin="${pageInfo.left }" end="${pageInfo.right }" var="page">
+		  	
+		  	  <li class="page-item ${pageInfo.current == page ? 'active' : '' }">
+		  	  	<a class="page-link" href="sub09?page=${page }">${page }</a>
+		  	  </li>
+		  	  
+		  	</c:forEach>
+		    
+		    
+		  </ul>
+		</nav>	
 		
 	</div>
 </body>
