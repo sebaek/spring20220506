@@ -59,6 +59,10 @@ public class Ex04Service {
 		
 		return mapper.listCustomerPage(from, rowPerPage);
 	}
+
+	public int countCustomers() {
+		return mapper.countCustomers();
+	}
 	
 }
 

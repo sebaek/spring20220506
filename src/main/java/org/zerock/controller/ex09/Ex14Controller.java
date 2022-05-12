@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.zerock.domain.ex01.CustomerDto;
 import org.zerock.domain.ex01.EmployeeDto;
+import org.zerock.domain.ex01.PageInfoDto;
 import org.zerock.service.ex02.Ex04Service;
 
 @Controller
@@ -139,10 +140,18 @@ public class Ex14Controller {
 		int rowPerPage = 5;
 		
 		List<CustomerDto> list = service.listCustomerPage(page, rowPerPage);
+		int totalRecords = service.countCustomers();
+		
+		int end = (totalRecords - 1) / rowPerPage + 1;
+		
+		PageInfoDto pageInfo = new PageInfoDto();
+		pageInfo.setCurrent(page);
+		pageInfo.setEnd(end);
 		
 		model.addAttribute("customers", list);
+		model.addAttribute("pageInfo", pageInfo);
 		
-		return "/ex14/sub08";
+		return "/ex14/sub09";
 	}
 }
 

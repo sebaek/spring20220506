@@ -58,6 +58,9 @@ public interface Ex02Mapper {
 			+ "FROM Customers "
 			+ "LIMIT #{from }, #{row }")
 	List<CustomerDto> listCustomerPage(@Param("from") int from, @Param("row") int row);
+
+	@Select("SELECT Count(CustomerId) FROM Customers ")
+	int countCustomers();
 }
 
 
