@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.zerock.domain.ex02.BoardDto;
 import org.zerock.service.ex03.Ex05Service;
@@ -55,6 +56,19 @@ public class Ex15Controller {
 		
 		// /WEB-INF/views/board/get.jsp로 포워드
 		return "/ex15/board/get";
+	}
+	
+	@PostMapping("board/modify")
+	public String modifyBoard(BoardDto board) {
+		boolean success = service.updateBoard(board);
+		
+		if (success) {
+			
+		} else {
+			
+		}
+		
+		return "redirect:/ex15/board/" + board.getId();
 	}
 }
 
