@@ -31,6 +31,12 @@ public interface Ex02Mapper {
 	int insertCustomer(CustomerDto customer);
 
 	
+	@Insert("INSERT INTO Employees "
+			+ "(FirstName, LastName, Photo, Notes) "
+			+ "VALUES (#{firstName}, #{lastName}, #{photo}, #{notes} )")
+	int insertEmployee(EmployeeDto dto);
+
+	
 }
 
 

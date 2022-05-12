@@ -36,6 +36,12 @@ public class Ex04Service {
 		int count = mapper.insertCustomer(customer);
 		return count == 1;
 	}
+
+	public boolean addEmployee(EmployeeDto dto) {
+		int count = mapper.insertEmployee(dto);
+		
+		return count == 1;
+	}
 	
 	
 }
