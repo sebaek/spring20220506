@@ -24,6 +24,10 @@ public class Ex05Service {
 	public List<BoardDto> listBoard() {
 		return mapper.selectBoard();
 	}
+
+	public BoardDto getBoard(int id) {
+		return mapper.getBoard(id);
+	}
 	
 }
 

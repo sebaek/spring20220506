@@ -44,15 +44,17 @@ public class Ex15Controller {
 		
 	}
 	
-	@GetMapping("board/{id}")
-	public void getBoard(@PathVariable("id") int id) {
+	@GetMapping("board/{id}") // 책 366쪽
+	public String getBoard(@PathVariable("id") int id, Model model) {
 		System.out.println(id);
 		
 		// 서비스일 시켜서 id에 해당하는 게시물 select
-		
+		BoardDto dto = service.getBoard(id);
 		// 모델에 넣고
+		model.addAttribute("board", dto);
 		
 		// /WEB-INF/views/board/get.jsp로 포워드
+		return "/ex15/board/get";
 	}
 }
 

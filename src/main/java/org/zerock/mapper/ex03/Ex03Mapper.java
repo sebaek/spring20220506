@@ -12,4 +12,6 @@ public interface Ex03Mapper {
 
 	List<BoardDto> selectBoard();
 
+	BoardDto getBoard(int id);
+
 }
