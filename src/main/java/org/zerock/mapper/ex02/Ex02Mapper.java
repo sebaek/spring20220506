@@ -42,6 +42,10 @@ public interface Ex02Mapper {
 	@Select("SELECT EmployeeID id, FirstName, LastName, Photo, Notes, BirthDate "
 			+ "FROM Employees ORDER BY EmployeeID ")
 	List<EmployeeDto> listEmployee();
+
+	@Select("SELECT CustomerID id, CustomerName, ContactName, Address,"
+			+ "City, PostalCode, Country FROM Customers ORDER BY CustomerId")
+	List<CustomerDto> listCustomer();
 }
 
 

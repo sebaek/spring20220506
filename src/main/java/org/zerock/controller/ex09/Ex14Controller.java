@@ -122,6 +122,15 @@ public class Ex14Controller {
 		
 		
 	}
+	
+	// 고객 목록 조회 코드 작성
+	@GetMapping("sub08")
+	public void method08(Model model) {
+		List<CustomerDto> list = service.listCustomer();
+		
+		model.addAttribute("customers", list);
+		
+	}
 }
 
 

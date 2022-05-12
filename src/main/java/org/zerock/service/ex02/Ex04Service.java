@@ -48,6 +48,10 @@ public class Ex04Service {
 	public List<EmployeeDto> listEmployee() {
 		return mapper.listEmployee();
 	}
+
+	public List<CustomerDto> listCustomer() {
+		return mapper.listCustomer();
+	}
 	
 }
 
