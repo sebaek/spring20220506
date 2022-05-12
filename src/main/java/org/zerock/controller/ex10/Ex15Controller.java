@@ -52,7 +52,7 @@ public class Ex15Controller {
 		
 		// 모델에 넣고
 		
-		// board/get.jsp로 포워드
+		// /WEB-INF/views/board/get.jsp로 포워드
 	}
 }
 
