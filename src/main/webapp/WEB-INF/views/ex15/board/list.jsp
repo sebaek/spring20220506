@@ -26,7 +26,15 @@
 			<c:forEach items="${boardList }" var="board">
 				<tr>
 					<td>${board.id }</td>
-					<td>${board.title }</td>
+					<td>
+					
+					<c:url value="/ex15/board/${board.id }" var="link"></c:url>
+					
+					<a href="${link }">
+						${board.title }
+					</a>
+					
+					</td>
 					<td>${board.inserted }</td>
 				</tr>
 			</c:forEach>

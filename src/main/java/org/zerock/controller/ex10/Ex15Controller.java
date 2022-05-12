@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.zerock.domain.ex02.BoardDto;
 import org.zerock.service.ex03.Ex05Service;
@@ -41,6 +42,17 @@ public class Ex15Controller {
 		
 		model.addAttribute("boardList", list);
 		
+	}
+	
+	@GetMapping("board/{id}")
+	public void getBoard(@PathVariable("id") int id) {
+		System.out.println(id);
+		
+		// 서비스일 시켜서 id에 해당하는 게시물 select
+		
+		// 모델에 넣고
+		
+		// board/get.jsp로 포워드
 	}
 }
 
