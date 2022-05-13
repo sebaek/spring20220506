@@ -44,6 +44,9 @@ public class Ex05Service {
 		// 댓글 지우기
 		replyMapper.deleteReplyByBoard(id);
 		
+		// exception
+		int i = 3 / 0;
+		
 		// 게시물 지우기
 		int cnt = mapper.deleteBoard(id);
 		
