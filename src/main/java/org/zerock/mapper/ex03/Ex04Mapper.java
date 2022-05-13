@@ -14,4 +14,13 @@ public interface Ex04Mapper {
 
 	int updateReply(ReplyDto reply);
 
+	void deleteReplyByBoard(int boardId);
+
 }
+
+
+
+
+
+
+
