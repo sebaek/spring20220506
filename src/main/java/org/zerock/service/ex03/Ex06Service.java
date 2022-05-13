@@ -1,6 +1,7 @@
 package org.zerock.service.ex03;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,4 +22,13 @@ public class Ex06Service {
 		return cnt == 1;
 	}
 
+	public List<ReplyDto> listReplyByBoardId(int boardId) {
+		return mapper.selectReplyByBoardId(boardId);
+	}
+
 }
+
+
+
+
+
