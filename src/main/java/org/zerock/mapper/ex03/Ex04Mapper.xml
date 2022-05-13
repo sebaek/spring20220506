@@ -26,6 +26,12 @@
 		DELETE FROM Reply
 		WHERE id = #{id }
 	</delete>
+	
+	<update id="updateReply">
+		UPDATE Reply
+		SET content = #{content }
+		WHERE id = #{id }
+	</update>
 </mapper>
 
 
