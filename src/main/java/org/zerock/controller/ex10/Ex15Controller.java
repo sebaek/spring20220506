@@ -71,7 +71,7 @@ public class Ex15Controller {
 		return "redirect:/ex15/board/" + board.getId();
 	}
 	
-	@PostMapping("/board/remove")
+	@PostMapping("board/remove")
 	public String removeBoard(int id) {
 		boolean success = service.removeBoardById(id);
 		
