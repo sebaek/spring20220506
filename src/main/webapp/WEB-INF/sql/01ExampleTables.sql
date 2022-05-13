@@ -23,3 +23,15 @@ SELECT * FROM Employees; -- 10개
 
 SELECT * FROM Customers ORDER BY CustomerID DESC;
 SELECT * FROM Employees ORDER BY EmployeeID DESC;
+
+
+
+
+
+
+
+
+
+
+
+
