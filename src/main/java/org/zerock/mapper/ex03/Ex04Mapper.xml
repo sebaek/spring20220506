@@ -21,7 +21,19 @@
 	ORDER BY id 
 	
 	</select>
+	
+	<delete id="deleteReplyById">
+		DELETE FROM Reply
+		WHERE id = #{id }
+	</delete>
 </mapper>
+
+
+
+
+
+
+
 
 
 
