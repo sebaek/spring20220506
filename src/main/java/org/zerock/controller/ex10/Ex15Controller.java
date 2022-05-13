@@ -99,9 +99,7 @@ public class Ex15Controller {
 			
 		}
 		
-		int id = 1;
-		
-		return "redirect:/ex15/board/" + id;
+		return "redirect:/ex15/board/" + board.getId();
 	}
 }
 
